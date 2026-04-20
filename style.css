@@ -1,0 +1,56 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #628ac1 100%);
+    background-attachment: fixed; /* Keeps the gradient from repeating if you scroll */
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh; /* Ensures the background covers the whole screen */
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.filter-box {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background for the filter area */
+    padding: 15px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Responsive Grid Implementation */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+/* Product Card UI */
+.product-card {
+    background: white;
+    padding: 20px;
+    border: none; /* Removed border for a cleaner look with the gradient */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    
+    /* Layout Transition Animation */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product-card p {
+    color: #28a745;
+    font-weight: bold;
+}
